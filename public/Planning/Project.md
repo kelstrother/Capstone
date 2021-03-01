@@ -85,6 +85,17 @@ User can view all available songs. (GET)
 User can select and play specific songs. (GET)
 User can upload songs. (POST)
 User can Delete songs. (DELETE)
+
+### <u>Models</u>
+##### Catalog
+- belongs to song
+- belongs to playlist
+##### Song
+- has many :catalogs
+- has many playlists through catalogs
+##### Playlist
+- has many :catalogs
+- has many songs through catalogs
 ### <u>MVP</u> (Backend)
 
 - Build out backend with ability to store audio files via Rails active storage.
